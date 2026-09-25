@@ -105,6 +105,10 @@ Speed is controlled by `STEP_DELAY` in the script (seconds of HIGH + seconds of 
 
 Lower `STEP_DELAY` = faster, but pure `time.sleep` timing on a Pi gets unreliable much above ~40 RPM at 1/16 microstepping — use `pigpio` waveforms or hardware PWM for smoother high-speed motion.
 
+## Switching to telemetry-link SSH
+
+If you want to command this actuator over the telemetry radio link instead of Wi-Fi/4G (for field/flight use), see [4G-to-Telem-Transfer](https://github.com/Aerial-Robot-Study-Circle-COEP/4G-to-Telem-Transfer) — it sets up PPP over a SiK-style telemetry radio pair so you can `ssh` to the companion Pi the same way, just over the radio link instead.
+
 ## First test
 
 1. Confirm wiring, DIP switches, and Vref are all set. Motor plugged in, power off.
